@@ -1,0 +1,100 @@
+/* Custom Animation Styles für das moderne Layout */
+
+/* Custom Cursor Styling */
+.custom-cursor {
+  mix-blend-mode: difference;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* Smooth scrolling für die gesamte Seite */
+html.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+/* Basis-Animationen für Elemente */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Hover-Effekte für interaktive Elemente */
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.03);
+}
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Spezielle Effekte für InteractiveCard */
+.interactive-card:hover .card-overlay {
+  opacity: 0.15;
+}
+
+.interactive-card:hover .card-content {
+  transform: translateY(-10px);
+}
+
+.interactive-card .card-content {
+  transition: transform 0.3s ease;
+}
+
+.interactive-card .card-overlay {
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+/* Media Queries für Touch-Geräte */
+@media (hover: none) {
+  .custom-cursor {
+    display: none;
+  }
+  
+  .hover-lift:active,
+  .hover-scale:active {
+    transform: scale(0.98);
+  }
+}
