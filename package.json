@@ -8,7 +8,8 @@
     "build": "webpack --mode production",
     "dev": "webpack --mode development --watch",
     "lint": "eslint src/**/*.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "react-static": "echo 'Running webpack build instead' && webpack --mode production"
   },
   "keywords": [
     "ernährung",
