@@ -65,29 +65,7 @@ function InteractiveCard({
           <h3 className="font-bold text-lg mb-2 text-gray-900">{title}</h3>
           <p className="text-gray-600 text-sm">{description}</p>
           
-          <motion.div 
-            className="mt-4 flex items-center text-green-600 font-medium"
-            animate={{ x: isHovered ? 5 : 0 }}
-            transition={{ duration: 0.2 }}
-          >
-            <span>Mehr erfahren</span>
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              className="h-4 w-4 ml-1" 
-              fill="none" 
-              viewBox="0 0 24 24" 
-              stroke="currentColor"
-            >
-              <motion.path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="M9 5l7 7-7 7"
-                animate={{ x: isHovered ? 3 : 0 }}
-                transition={{ duration: 0.2 }}
-              />
-            </svg>
-          </motion.div>
+          {/* Mehr erfahren Link wurde entfernt */}
         </motion.div>
       </Link>
     </motion.div>
